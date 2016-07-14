@@ -1,0 +1,21 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_主页}    检验内容_菜单图标=主页_检验内容_菜单图标.png    按钮_退出菜单图标=主页_按钮_退出菜单.png    按钮_退出菜单图标_背景图标=主页_按钮_退出菜单_背景.png    按钮_头像图标=主页_按钮_头像图标.png    输入框_搜索=主页_输入框_搜索.png    按钮_消息_搜索结果=主页_按钮_消息_我的手机.png    按钮_下拉菜单=主页_按钮_下拉菜单.png
+...               按钮_下拉菜单_背景=主页_按钮_下拉菜单_背景.png
+
+*** Keywords ***
+DesktopAPP主页_搜索
+    #Run Keyword And Continue On Failure    DeskTop Click    &{DesktopAPP_主页}[按钮_下拉菜单]    &{DesktopAPP_主页}[按钮_下拉菜单_背景]
+    #Run Keyword And Continue On Failure    Desktop Click    &{DesktopAPP_菜单页}[按钮_退出]
+    DeskTop Click    &{DesktopAPP_主页}[输入框_搜索]
+    Desktop Paste Text    我的手机
+
+DesktopAPP主页_经消息进入会话页
+    DeskTop Double Click    &{DesktopAPP_主页}[按钮_消息_搜索结果]
+
+DesktopAPP主页_点击下拉菜单
+    DeskTop Click    &{DesktopAPP_主页}[按钮_下拉菜单]    &{DesktopAPP_主页}[按钮_下拉菜单_背景]
+
+屏幕截图
+    Desktop Capture Screen

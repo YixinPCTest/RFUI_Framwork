@@ -1,0 +1,63 @@
+*** Settings ***
+Suite Setup       DesktopApp测试准备
+Suite Teardown    关闭Desktop远程服务器
+Resource          ../PubResource-POM/元子页面关键字.txt
+Library           Selenium2Library
+Library           SikuliLibrary
+
+*** Test Cases ***
+发送消息，贴图
+    [Setup]
+    DesktopAPP登录页_登入易信DesktopAPP
+    #DesktopAPP错误时始终退出应用
+    DesktopAPP主页_搜索
+    DesktopAPP主页_经消息进入会话页
+    DesktopAPP会话页_清屏
+    DesktopAPP会话页_发送消息
+    DesktopAPP会话页_发送贴图
+    DesktopAPP会话页_关闭窗口
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_注销
+    [Teardown]    DesktopAPP用例失败时始终退出应用
+
+发送文件
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索
+    DesktopAPP主页_经消息进入会话页
+    DesktopAPP会话页_清屏
+    DesktopAPP会话页_发送文件    测试
+    DesktopAPP会话页_关闭窗口
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_退出
+
+发送txt文件收藏
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索
+    DesktopAPP主页_经消息进入会话页
+    DesktopAPP会话页_清屏
+    DesktopAPP会话页_发送收藏按钮
+    DesktopAPP收藏页_搜索    测试
+    DesktopAPP收藏页_确定发送
+    DesktopAPP会话页_发送校验
+    DesktopAPP会话页_关闭窗口
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_注销
+
+会话页收藏消息
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索
+    DesktopAPP主页_经消息进入会话页
+    DesktopAPP会话页_清屏
+    DesktopAPP会话页_发送消息    啦啦~~啦啦~~啦啦啦啦啦！
+    DesktopAPP会话页_右键收藏消息
+    DesktopAPP会话页_关闭窗口
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_我的收藏
+    DesktopAPP收藏页_搜索    啦啦~~啦啦~~啦啦啦啦啦！
+    DesktopAPP收藏页_确定删除
+    DesktopAPP收藏页_关闭
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_注销
+
+威尔而
+    DesktopAPP会话页_拖拽功能

@@ -1,0 +1,35 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_菜单页}    按钮_退出=菜单页_按钮_退出.png    按钮_注销=菜单页_按钮_注销.png    按钮_发起群聊=菜单页_按钮_发起群聊.png    按钮_传文件到手机=菜单页_按钮_传文件到手机.png    按钮_我的收藏=菜单页_按钮_我的收藏.png    按钮_免费短信=菜单页_按钮_免费短信.png    按钮_设置=菜单页_按钮_设置.png
+...               按钮_意见反馈=菜单页_按钮_意见反馈.png    按钮_关于易信=菜单页_按钮_关于易信.png
+
+*** Keywords ***
+DesktopAPP菜单页_发起群聊
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_发起群聊]
+
+DesktopAPP菜单页_传文件到手机
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_传文件到手机]
+
+DesktopAPP菜单页_我的收藏
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_我的收藏]
+
+DesktopAPP菜单页_免费短信
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_免费短信]
+
+DesktopAPP菜单页_设置
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_设置]
+
+DesktopAPP菜单页_意见反馈
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_意见反馈]
+
+DesktopAPP菜单页_关于易信
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_关于易信]
+
+DesktopAPP菜单页_注销
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_注销]
+    DesktopAPP登录页_关闭窗口
+    #注销后会自动弹出登录框，会导致下一次登录失败率提高，所以统一关闭
+
+DesktopAPP菜单页_退出
+    Desktop Click    &{DesktopAPP_菜单页}[按钮_退出]

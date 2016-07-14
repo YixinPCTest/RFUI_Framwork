@@ -1,0 +1,8 @@
+*** Settings ***
+Resource          基础关键字.txt
+Resource          登录页.txt
+Resource          主页.txt
+Resource          会话页.txt
+Resource          菜单页.txt
+Resource          收藏页.txt
+Resource          ../../Resources/Desktop_Config.txt

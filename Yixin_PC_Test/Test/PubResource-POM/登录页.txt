@@ -1,0 +1,21 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_应用入口}    应用入口_易信PC版图标=应用入口_易信PC版图标.png
+&{DesktopAPP_登录页}    输入框_用户名图标=登录页_输入框_用户名.png    输入框_密码图标=登录页_输入框_密码.png    按钮_登录图标=登录页_按钮_登录.png    按钮_关闭=登录页_按钮_关闭.png
+${username}       18200116985
+${password}       xtt19921022
+
+*** Keywords ***
+DesktopAPP登录页_登入易信DesktopAPP
+    Desktop Double Click    &{DesktopAPP_应用入口}[应用入口_易信PC版图标]
+    Desktop Wait Until Screen Contain    &{DesktopAPP_登录页}[输入框_用户名图标]    10
+    Desktop Click    &{DesktopAPP_登录页}[输入框_用户名图标]
+    Desktop Input Text    ${username}
+    Desktop Click    &{DesktopAPP_登录页}[输入框_密码图标]
+    Desktop Input Text    ${password}
+    Desktop Click    &{DesktopAPP_登录页}[按钮_登录图标]
+    Desktop Wait Until Screen Contain    &{DesktopAPP_主页}[检验内容_菜单图标]    10
+
+DesktopAPP登录页_关闭窗口
+    Desktop Click    &{DesktopAPP_登录页}[按钮_关闭]

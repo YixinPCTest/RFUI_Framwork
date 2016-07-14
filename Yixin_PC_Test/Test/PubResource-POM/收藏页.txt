@@ -1,0 +1,20 @@
+*** Variables ***
+&{DesktopAPP_收藏页}    检验内容_我的收藏=收藏页_检验内容_我的收藏.png    输入框_搜索=收藏页_输入框_搜索.png    按钮_发送=收藏页_按钮_发送.png    按钮_确定发送=收藏页_按钮_确定发送.png    按钮_确定发送_背景=收藏页_按钮_确定发送_背景.png    按钮_删除=收藏页_按钮_删除.png    按钮_确定删除=收藏页_按钮_确定删除.png
+...               按钮_关闭_背景=收藏页_按钮_关闭_背景.png    按钮_关闭=收藏页_按钮_关闭.png
+
+*** Keywords ***
+DesktopAPP收藏页_搜索
+    [Arguments]    ${message}
+    Desktop Click    &{DesktopAPP_收藏页}[输入框_搜索]
+    Desktop Paste Text    ${message}
+
+DesktopAPP收藏页_确定发送
+    Desktop Click    &{DesktopAPP_收藏页}[按钮_发送]
+    Desktop Click    &{DesktopAPP_收藏页}[按钮_确定发送]    &{DesktopAPP_收藏页}[按钮_确定发送_背景]
+
+DesktopAPP收藏页_确定删除
+    Desktop Click    &{DesktopAPP_收藏页}[按钮_删除]
+    Desktop Click    &{DesktopAPP_收藏页}[按钮_确定删除]
+
+DesktopAPP收藏页_关闭
+    Desktop Click    &{DesktopAPP_收藏页}[按钮_关闭]

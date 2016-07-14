@@ -1,0 +1,34 @@
+*** Settings ***
+
+*** Variables ***
+${IMAGE_DIR}      ${CURDIR}\\Images
+${Capture_DIR}    ${CURDIR}\\Capture_Images
+
+*** Keywords ***
+DesktopApp测试准备
+    [Documentation]    1.设置图片使用路径
+    启动Desktop远程服务器
+    # temp set timeout=10 due to poor network
+    Desktop Set Timeout    10
+    Desktop Set Image Path    ${IMAGE_DIR}
+    Desktop Set Capture Folder    ${Capture_DIR}
+
+DesktopAPP设置标签（错的）
+    [Arguments]    @{Tags}
+    Set Tags    @{Tags}
+
+DesktopAPP错误时始终退出应用
+    Run Keyword And Continue On Failure    DesktopAPP主页_点击下拉菜单
+    Run Keyword And Continue On Failure    DesktopAPP菜单页_退出
+
+DesktopAPP用例失败时始终退出应用
+    Run Keyword If Test Failed    Run Keywords    DesktopAPP主页_点击下拉菜单    DesktopAPP菜单页_退出
+
+if else写法
+    DesktopAPP登录页_登入易信DesktopAPP
+    ${PASS}=    Run Keyword And Return Status    DesktopAPP主页_搜索
+    Run Keyword If    ${PASS}    DesktopAPP主页_经消息进入会话页
+    ...    ELSE    Run Keywords    DesktopAPP主页_点击下拉菜单    DesktopAPP菜单页_退出
+
+实验
+    Desktop Mouse Move    &{DesktopAPP_应用入口}[应用入口_易信PC版图标]

@@ -1,0 +1,63 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_会话页}    按钮_发送=会话页_按钮_发送.png    按钮_关闭窗口=会话页_按钮_关闭窗口.png    系统提示框_退出图标=消息页_系统提示框_退出.png    系统提示框_退出图标_背景图标=消息页_系统提示框_退出_背景.png    按钮_笑脸=会话页_按钮_笑脸.png    按钮_熊小易=会话页_按钮_熊小易.png    按钮_小熊踢球=会话页_按钮_小熊踢球.png
+...               按钮_文件=会话页_按钮_文件.png    消息显示部分_空白处=会话页_消息显示部分_空白处.png    消息显示部分_空白处_背景=会话页_消息显示部分_空白处_背景.png    按钮_清屏=会话页_按钮_清屏.png    消息输入框_空白处=会话页_消息输入框_空白处.png    消息输入框_空白处_背景=会话页_消息输入框_空白处_背景.png    按钮_收藏=会话页_按钮_收藏.png
+...               发送校验_已发送=会话页_发送校验_已发送.png    消息_右击=会话页_消息_右击.png    按钮_右键收藏=会话页_按钮_右键收藏.png    弹框_已收藏=会话页_弹框_已收藏.png    按钮_截图=会话页_按钮_截图.png    截图页_按钮_完成=会话页_截图页_按钮_完成.png    按钮_1=会话页_按钮_1.png
+...               按钮_2=会话页_按钮_2.png
+&{DesktopAPP_计算机页}    输入框_文件搜索=计算机页_输入框_文件搜索.png    按钮_点击文件=计算机页_按钮_点击文件.png    输入框_文件搜索_背景=计算机页_输入框_文件搜索_背景.png
+${message}        啦啦~~啦啦~~啦啦啦啦啦！
+
+*** Keywords ***
+DesktopAPP会话页_发送消息
+    Desktop Click    &{DesktopAPP会话页}[消息输入框_空白处]    &{DesktopAPP会话页}[消息输入框_空白处_背景]
+    Desktop Paste Text    ${message}
+    Desktop Click    &{DesktopAPP会话页}[按钮_发送]
+
+DesktopAPP会话页_多次发送同一消息
+    [Arguments]    ${times}
+    Repeat Keyword    ${times}    DesktopAPP会话页_发送消息
+
+DesktopAPP会话页_关闭窗口
+    Desktop Click    &{DesktopAPP会话页}[按钮_关闭窗口]
+
+DesktopAPP会话页_发送贴图
+    Desktop Click    &{DesktopAPP会话页}[按钮_笑脸]
+    Desktop Click    &{DesktopAPP会话页}[按钮_熊小易]
+    Desktop Click    &{DesktopAPP会话页}[按钮_小熊踢球]
+    Desktop Screen Should Contain    &{DesktopAPP会话页}[按钮_小熊踢球]
+
+DesktopAPP会话页_发送文件
+    [Arguments]    ${file}
+    Desktop Click    &{DesktopAPP会话页}[按钮_文件]
+    Desktop Click    &{DesktopAPP计算机页}[输入框_文件搜索]
+    Desktop Paste Text    ${file}
+    Desktop Click    &{DesktopAPP计算机页}[按钮_点击文件]
+    Desktop Click    &{DesktopAPP会话页}[按钮_发送]
+
+DesktopAPP会话页_清屏
+    Desktop Right Click    &{DesktopAPP会话页}[消息显示部分_空白处]    &{DesktopAPP会话页}[消息显示部分_空白处_背景]
+    Desktop Click    &{DesktopAPP会话页}[按钮_清屏]
+
+DesktopAPP会话页_发送收藏按钮
+    Desktop Click    &{DesktopAPP会话页}[按钮_收藏]
+
+DesktopAPP会话页_发送校验
+    Desktop Screen Should Contain    &{DesktopAPP会话页}[发送校验_已发送]
+
+DesktopAPP会话页_右键收藏消息
+    Desktop Right Click    &{DesktopAPP会话页}[消息_右击]
+    Desktop Click    &{DesktopAPP会话页}[按钮_右键收藏]
+    Desktop Screen Should Contain    &{DesktopAPP会话页}[弹框_已收藏]
+
+DesktopAPP会话页_截图功能
+    Desktop Click    &{DesktopAPP会话页}[按钮_截图]
+    Desktop Mouse Move    &{DesktopAPP会话页}[按钮_笑脸]
+    Desktop Mouse Down    LEFT
+    Desktop Mouse Move    &{DesktopAPP会话页}[按钮_截图]
+    Desktop Mouse Up    LEFT
+    Desktop Click    &{DesktopAPP会话页}[截图页_按钮_完成]
+    Desktop Click    &{DesktopAPP会话页}[按钮_发送]
+
+DesktopAPP会话页_拖拽功能
+    Desktop Drag And Drop    &{DesktopAPP会话页}[按钮_1]    &{DesktopAPP会话页}[按钮_2]
