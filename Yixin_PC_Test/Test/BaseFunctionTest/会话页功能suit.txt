@@ -58,6 +58,3 @@ Library           SikuliLibrary
     DesktopAPP收藏页_关闭
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
-
-威尔而
-    DesktopAPP会话页_拖拽功能
