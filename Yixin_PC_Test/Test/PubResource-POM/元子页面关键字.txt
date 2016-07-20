@@ -6,3 +6,4 @@ Resource          会话页.txt
 Resource          菜单页.txt
 Resource          收藏页.txt
 Resource          ../../Resources/Desktop_Config.txt
+Resource          计算机页.txt

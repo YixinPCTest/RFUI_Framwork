@@ -20,19 +20,17 @@ DesktopAPP会话页_多次发送同一消息
 DesktopAPP会话页_关闭窗口
     Desktop Click    &{DesktopAPP会话页}[按钮_关闭窗口]
 
+DesktopAPP会话页_点击发送按钮
+    Desktop Click    &{DesktopAPP会话页}[按钮_发送]
+
 DesktopAPP会话页_发送贴图
     Desktop Click    &{DesktopAPP会话页}[按钮_笑脸]
     Desktop Click    &{DesktopAPP会话页}[按钮_熊小易]
     Desktop Click    &{DesktopAPP会话页}[按钮_小熊踢球]
     Desktop Screen Should Contain    &{DesktopAPP会话页}[按钮_小熊踢球]
 
-DesktopAPP会话页_发送文件
-    [Arguments]    ${file}
+DesktopAPP会话页_点击发送文件
     Desktop Click    &{DesktopAPP会话页}[按钮_文件]
-    Desktop Click    &{DesktopAPP计算机页}[输入框_文件搜索]
-    Desktop Paste Text    ${file}
-    Desktop Click    &{DesktopAPP计算机页}[按钮_点击文件]
-    Desktop Click    &{DesktopAPP会话页}[按钮_发送]
 
 DesktopAPP会话页_清屏
     Desktop Right Click    &{DesktopAPP会话页}[消息显示部分_空白处]    &{DesktopAPP会话页}[消息显示部分_空白处_背景]
@@ -58,5 +56,5 @@ DesktopAPP会话页_截图功能
     Desktop Click    &{DesktopAPP会话页}[截图页_按钮_完成]
     Desktop Click    &{DesktopAPP会话页}[按钮_发送]
 
-DesktopAPP会话页_拖拽功能
-    Desktop Drag And Drop    &{DesktopAPP会话页}[按钮_1]    &{DesktopAPP会话页}[按钮_2]
+DesktopAPP会话页_拖拽
+    Desktop Drag And Drop    &{DesktopAPP_应用入口}[应用入口_易信PC版图标]    &{DesktopAPP会话页}[消息输入框_空白处_背景]
