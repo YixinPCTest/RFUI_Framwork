@@ -6,4 +6,20 @@ Library           SikuliLibrary
 
 *** Test Cases ***
 主页菜单点击发起群聊-新建群
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_发起群聊
+    DesktopAPP建群好友添加页_搜索好友    测试1
+    DesktopAPP建群好友添加页_选择好友
+    DesktopAPP建群好友添加页_清空搜索内容
+    DesktopAPP建群好友添加页_搜索好友    测试2
+    DesktopAPP建群好友添加页_选择好友
+    DesktopAPP建群好友添加页_点击开始聊天
+    DesktopAPP群会话页_关闭页面
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_退出
+
+群会话页-邀请好友加入群聊-再将好友移除群聊
+    DesktopAPP主页_搜索    测试2
+    DesktopAPP主页_点击进入群会话页
+    DesktopAPP群会话页_邀请好友加入

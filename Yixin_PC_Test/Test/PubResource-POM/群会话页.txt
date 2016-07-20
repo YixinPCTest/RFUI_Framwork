@@ -1,0 +1,15 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_群会话页}    文本_建群提示=群会话页_文本_建群提示.png    小叉_关闭页面=群会话页_小叉_关闭页面.png    按钮_邀请好友=群会话页_按钮_邀请好友.png
+&{DesktopAPP_群会话页_邀请页}    按钮_邀请=群会话页_邀请页_按钮_邀请.png
+
+*** Keywords ***
+DesktopAPP群会话页_关闭页面
+    Desktop Click    &{DesktopAPP_群会话页}[小叉_关闭页面]
+
+DesktopAPP群会话页_邀请好友加入
+    Desktop Click    &{DesktopAPP_群会话页}[按钮_邀请好友]
+    DesktopAPP建群好友添加页_搜索好友    测试3
+    DesktopAPP建群好友添加页_选择好友
+    Desktop Click    &{DesktopAPP_群会话页_邀请页}[按钮_邀请]

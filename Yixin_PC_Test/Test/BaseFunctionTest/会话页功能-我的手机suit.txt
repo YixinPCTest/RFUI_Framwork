@@ -5,11 +5,11 @@ Resource          ../PubResource-POM/元子页面关键字.txt
 Library           SikuliLibrary
 
 *** Test Cases ***
-进入我的手机-会话页发送消息，贴图-退出易信
+登陆-会话页发送消息，贴图-退出易信
     [Setup]
     DesktopAPP登录页_登入易信DesktopAPP
     #DesktopAPP错误时始终退出应用
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
     DesktopAPP会话页_发送消息
@@ -19,9 +19,9 @@ Library           SikuliLibrary
     DesktopAPP菜单页_注销
     [Teardown]    DesktopAPP用例失败时始终退出应用
 
-进入我的手机-会话页发送文件-退出易信
+登陆-会话页发送文件-退出易信
     DesktopAPP登录页_登入易信DesktopAPP
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_点击发送文件
     DesktopAPP计算机页_打开文件    C:\\Users\\Administrator\\Desktop\\易信发送文件\\测试.txt
@@ -30,9 +30,9 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-进入我的手机-会话页发送我的收藏-退出易信
+登陆-会话页发送我的收藏-退出易信
     DesktopAPP登录页_登入易信DesktopAPP
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
     DesktopAPP会话页_发送收藏按钮
@@ -43,9 +43,9 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-进入我的手机-会话页收藏消息-退出易信
+登陆-会话页收藏消息-退出易信
     DesktopAPP登录页_登入易信DesktopAPP
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
     DesktopAPP会话页_发送消息    啦啦~~啦啦~~啦啦啦啦啦！
@@ -59,9 +59,9 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-进入我的手机-会话页通过拖拽发送文件-退出易信
+登陆-会话页通过拖拽发送文件-退出易信
     DesktopAPP登录页_登入易信DesktopAPP
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
     DesktopAPP会话页_拖拽
@@ -71,9 +71,9 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-进入我的手机-会话页发送截图-退出易信
+登陆-会话页发送截图-退出易信
     DesktopAPP登录页_登入易信DesktopAPP
-    DesktopAPP主页_搜索
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
     Desktop Click    &{DesktopAPP会话页}[按钮_截图]
