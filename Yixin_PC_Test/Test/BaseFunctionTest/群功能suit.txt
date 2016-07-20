@@ -20,6 +20,13 @@ Library           SikuliLibrary
     DesktopAPP菜单页_退出
 
 群会话页-邀请好友加入群聊-再将好友移除群聊
+    DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    测试2
     DesktopAPP主页_点击进入群会话页
     DesktopAPP群会话页_邀请好友加入
+    DesktopAPP群会话页_点击群头像
+    DesktopAPP群会话页_群资料页_移除好友
+    DesktopAPP群会话页_群资料页_关闭页面
+    DesktopAPP群会话页_关闭页面
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_退出

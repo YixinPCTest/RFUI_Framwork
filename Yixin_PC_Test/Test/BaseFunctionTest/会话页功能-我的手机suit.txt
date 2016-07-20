@@ -24,7 +24,7 @@ Library           SikuliLibrary
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_点击发送文件
-    DesktopAPP计算机页_打开文件    C:\\Users\\Administrator\\Desktop\\易信发送文件\\测试.txt
+    DesktopAPP计算机页_打开文件
     DesktopAPP会话页_点击发送按钮
     DesktopAPP会话页_关闭窗口
     DesktopAPP主页_点击下拉菜单
