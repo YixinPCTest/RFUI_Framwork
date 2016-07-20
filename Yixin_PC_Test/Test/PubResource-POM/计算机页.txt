@@ -1,0 +1,11 @@
+*** Settings ***
+
+*** Variables ***
+${输入框_文件名图标}      计算机页_文件对话框_输入框.png
+${按钮_打开图标}        计算机页_打开图片.png
+
+*** Keywords ***
+DesktopAPP计算机页_打开文件
+    [Arguments]    ${发送文件路径}
+    Desktop Paste Text    ${发送文件路径}    ${输入框_文件名图标}
+    Desktop Click    ${按钮_打开图标}
