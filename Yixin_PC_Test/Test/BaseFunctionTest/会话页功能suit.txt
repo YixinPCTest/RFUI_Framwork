@@ -2,7 +2,6 @@
 Suite Setup       DesktopApp测试准备
 Suite Teardown    关闭Desktop远程服务器
 Resource          ../PubResource-POM/元子页面关键字.txt
-Library           Selenium2Library
 Library           SikuliLibrary
 
 *** Test Cases ***
@@ -25,7 +24,9 @@ Library           SikuliLibrary
     DesktopAPP主页_搜索
     DesktopAPP主页_经消息进入会话页
     DesktopAPP会话页_清屏
-    DesktopAPP会话页_发送文件    测试
+    DesktopAPP会话页_打开文件
+    DesktopAPP计算机页_打开文件    ${发送文件路径}
+    DesktopAPP会话页_发送文件
     DesktopAPP会话页_关闭窗口
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
