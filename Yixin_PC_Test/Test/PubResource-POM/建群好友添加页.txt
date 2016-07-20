@@ -1,0 +1,18 @@
+*** Settings ***
+
+*** Variables ***
+&{DesktopAPP_建群好友添加页}    输入框_搜索=建群好友添加页_输入框_搜索.png    圆圈_好友=建群好友添加页_圆圈_好友.png    按钮_开始聊天=建群好友添加页_按钮_开始聊天.png    小叉_删除=建群好友添加页_小叉_删除.png
+
+*** Keywords ***
+DesktopAPP建群好友添加页_搜索好友
+    [Arguments]    ${friend}
+    Desktop Paste Text    ${friend}    &{DesktopAPP_建群好友添加页}[输入框_搜索]
+
+DesktopAPP建群好友添加页_清空搜索内容
+    Desktop Click    &{DesktopAPP_建群好友添加页}[小叉_删除]
+
+DesktopAPP建群好友添加页_选择好友
+    Desktop Click    &{DesktopAPP_建群好友添加页}[圆圈_好友]
+
+DesktopAPP建群好友添加页_点击开始聊天
+    Desktop Click    &{DesktopAPP_建群好友添加页}[按钮_开始聊天]
