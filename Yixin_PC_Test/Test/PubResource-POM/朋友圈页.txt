@@ -1,6 +1,7 @@
 *** Variables ***
 &{DesktopAPP_朋友圈页}    按钮_发布动态=朋友圈页_按钮_发布动态.png    按钮_关闭=朋友圈页_按钮_关闭.png
 &{DesktopAPP_发布动态页}    动态消息_输入框空白窗=发布动态页_动态消息_输入框空白窗.png    按钮_发布=发布动态页_按钮_发布.png    按钮_打开表情=发布动态页_按钮_打开表情.png    表情_鼓掌=发布动态页_表情_鼓掌.png    有表情_输入框=发布动态页_有表情_输入框.png    按钮_消息列表=朋友圈页_按钮_消息列表.png    按钮_刷新动态=朋友圈页_按钮_刷新动态.png
+...               按钮_打开图片=发布动态页_按钮_图片.png
 
 *** Keywords ***
 DesktopAPP朋友圈页_发布动态_文字
@@ -20,12 +21,16 @@ DesktopAPP朋友圈页_发布动态_文字+表情
     Desktop Click    &{DesktopAPP_发布动态页}[按钮_发布]
 
 DesktopAPP朋友圈页_发布动态_文字+图片
+    [Arguments]    ${behaviour}
     Desktop Click    &{DesktopAPP_朋友圈页}[按钮_发布动态]
-    Desktop Click    &{DesktopAPP_发布动态页}[按钮_打开表情]
-    Desktop Click    &{DesktopAPP_发布动态页}[表情_鼓掌]
-    Desktop Click    &{DesktopAPP_发布动态页}[有表情_输入框]
+    Desktop Click    &{DesktopAPP_发布动态页}[动态消息_输入框空白窗]
+    Desktop Paste Text    ${behaviour}
+    Desktop Click    &{DesktopAPP_发布动态页}[按钮_打开图片]
 
 DesktopAPP朋友圈页_发布动态_表情+图片
+
+DesktopAPP朋友圈页_发布按钮
+    Desktop Click    &{DesktopAPP_发布动态页}[按钮_发布]
 
 DesktopAPP朋友圈页_消息列表
     Desktop Click    &{DesktopAPP_朋友圈页}[按钮_消息列表]

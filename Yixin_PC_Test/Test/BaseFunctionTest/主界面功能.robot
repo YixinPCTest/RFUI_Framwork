@@ -5,14 +5,24 @@ Resource          ../PubResource-POM/元子页面关键字.txt
 Library           SikuliLibrary
 
 *** Test Cases ***
+打开该会话_我的手机
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    我的手机
+    DesktopAPP主页_打开会话页
+    DesktopAPP会话页_关闭窗口
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_注销
+
 置顶该会话_我的手机
     DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_置顶该会话
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
 从列表中删除该会话_我的手机
     DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_取消置顶
     DesktopAPP主页_从列表中删除该会话
     DesktopAPP主页_点击下拉菜单
