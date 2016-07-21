@@ -3,13 +3,14 @@
 *** Variables ***
 &{DesktopAPP_群空间页}    按钮_发布=群空间页_按钮_发布.png    文本_发布校验=群空间页_文本_发布校验.png    小叉_关闭=群空间页_小叉_关闭.png    小叉_关闭_背景=群空间页_小叉_关闭_背景.png    按钮_白色爱心=群空间页_按钮_白色爱心.png    按钮_红色爱心=群空间页_按钮_红色爱心.png    按钮_评论=群空间页_按钮_评论.png
 ...               按钮_回复=群空间页_按钮_回复.png    文本_评论背景=群空间页_文本_评论背景.png    按钮_点赞校验=群空间页_按钮_点赞校验.png    按钮_删除=群空间页_按钮_删除.png
-&{DesktopAPP_群空间_发布动态页}    文本_背景=群空间_发布动态页_文本_背景.png    按钮_笑脸=群空间_发布动态页_按钮_笑脸.png    按钮_大笑=群空间_发布动态页_按钮_大笑.png    按钮_图片=群空间_发布动态页_按钮_图片.png    按钮_截图=群空间_发布动态页_按钮_截图.png    按钮_发布=群空间_发布动态页_按钮_发布.png    按钮_发布_背景=群空间_发布动态页_按钮_发布_背景.png
+&{DesktopAPP_群空间_发布动态页}    文本_背景=群空间_发布动态页_文本_背景.png    按钮_笑脸=群空间_发布动态页_按钮_笑脸.png    按钮_笑脸_背景=群空间_发布动态页_按钮_笑脸_背景.png    按钮_大笑=群空间_发布动态页_按钮_大笑.png    按钮_图片=群空间_发布动态页_按钮_图片.png    按钮_截图=群空间_发布动态页_按钮_截图.png    按钮_发布=群空间_发布动态页_按钮_发布.png
+...               按钮_发布_背景=群空间_发布动态页_按钮_发布_背景.png
 
 *** Keywords ***
 DesktopAPP群空间页_发布群动态
     Desktop Click    &{DesktopAPP_群空间页}[按钮_发布]
     Desktop Paste Text    新的一天！    &{DesktopAPP_群空间_发布动态页}[文本_背景]
-    Desktop Click    &{DesktopAPP_群空间_发布动态页}[按钮_笑脸]
+    Desktop Click    &{DesktopAPP_群空间_发布动态页}[按钮_笑脸]    &{DesktopAPP_群空间_发布动态页}[按钮_笑脸_背景]
     Desktop Click    &{DesktopAPP_群空间_发布动态页}[按钮_大笑]
     Desktop Click    &{DesktopAPP_群空间_发布动态页}[按钮_图片]
     DesktopAPP计算机页_打开图片
@@ -24,7 +25,6 @@ DesktopAPP群空间页_关闭页面
 
 DesktopAPP群空间页_点赞群动态
     Desktop Click    &{DesktopAPP_群空间页}[按钮_白色爱心]
-    Desktop Screen Should Contain    &{DesktopAPP_群空间页}[按钮_点赞校验]
 
 DesktopAPP群空间页_评论群动态
     Desktop Click    &{DesktopAPP_群空间页}[按钮_评论]

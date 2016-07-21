@@ -32,4 +32,24 @@ Library           SikuliLibrary
     DesktopAPP菜单页_退出
 
 群会话页-进入群空间-发布群动态
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    测试2
+    DesktopAPP主页_点击进入群会话页
+    DesktopAPP群会话页_进入群空间
+    DesktopAPP群会话页_关闭页面
+    DesktopAPP群空间页_发布群动态
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_退出
+
+群会话页-进入群空间点赞_评论_回复_删除群动态
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    测试2
+    DesktopAPP主页_点击进入群会话页
+    DesktopAPP群会话页_进入群空间
+    DesktopAPP群会话页_关闭页面
+    DesktopAPP群空间页_点赞群动态
+    DesktopAPP群空间页_评论群动态
+    DesktopAPP群空间页_回复评论
     DesktopAPP群空间页_删除群动态
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_退出
