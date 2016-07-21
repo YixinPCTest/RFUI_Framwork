@@ -32,4 +32,4 @@ Library           SikuliLibrary
     DesktopAPP菜单页_退出
 
 群会话页-进入群空间-发布群动态
-    DesktopAPP群空间页_点赞群动态
+    DesktopAPP群空间页_删除群动态
