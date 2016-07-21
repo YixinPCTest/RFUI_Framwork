@@ -4,8 +4,13 @@
 ${输入框_文件名图标}      计算机页_文件对话框_输入框.png
 ${按钮_打开图标}        计算机页_打开图片.png
 ${发送文件路径}         ${CURDIR}\\publicres\\file\\测试.txt
+${发送图片路径}         ${CURDIR}\\publicres\\img\\Koala.jpg
 
 *** Keywords ***
 DesktopAPP计算机页_打开文件
     Desktop Paste Text    ${发送文件路径}    ${输入框_文件名图标}
+    Desktop Click    ${按钮_打开图标}
+
+DesktopAPP计算机页_打开图片
+    Desktop Paste Text    ${发送图片路径}    ${输入框_文件名图标}
     Desktop Click    ${按钮_打开图标}

@@ -1,4 +1,4 @@
-﻿*** Settings ***
+*** Settings ***
 Resource          基础关键字.txt
 Resource          登录页.txt
 Resource          主页.txt
@@ -10,3 +10,4 @@ Resource          计算机页.txt
 Resource          建群好友添加页.txt
 Resource          群会话页.txt
 Resource          朋友圈页.txt
+Resource          群空间页.txt
