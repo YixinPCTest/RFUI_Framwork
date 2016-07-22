@@ -56,3 +56,4 @@ Library           SikuliLibrary
 
 群资料页_右键群成员,群主_下拉选项展示正确
     DesktopAPP群资料页_右键设为群管理员
+    DesktopAPP群资料页_右键取消群管理员
