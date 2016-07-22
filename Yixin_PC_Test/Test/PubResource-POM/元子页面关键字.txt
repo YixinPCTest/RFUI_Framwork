@@ -11,3 +11,4 @@ Resource          建群好友添加页.txt
 Resource          群会话页.txt
 Resource          朋友圈页.txt
 Resource          群空间页.txt
+Resource          群资料页.txt
