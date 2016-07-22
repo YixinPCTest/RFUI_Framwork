@@ -2,8 +2,8 @@
 
 *** Variables ***
 &{DesktopAPP_主页}    检验内容_菜单图标=主页_检验内容_菜单图标.png    按钮_退出菜单图标=主页_按钮_退出菜单.png    按钮_退出菜单图标_背景图标=主页_按钮_退出菜单_背景.png    按钮_头像图标=主页_按钮_头像图标.png    输入框_搜索=主页_输入框_搜索.png    按钮_消息_搜索结果=主页_按钮_消息_我的手机.png    按钮_下拉菜单=主页_按钮_下拉菜单.png
-...               按钮_下拉菜单_背景=主页_按钮_下拉菜单_背景.png    按钮_群组_搜索结果=主页_按钮_群组_搜索结果.png    按钮_朋友圈=主页_按钮_朋友圈.png    选择_会话消息=主页_选择_会话消息.png    会话_显示处=主页_会话_显示处.png    会话显示处_背景=主页_会话显示处_背景.png    按钮_置顶该会话=主页_按钮_置顶该会话.png
-...               按钮_从列表中删除=主页_按钮_从列表中删除.png    按钮_取消置顶=主页_按钮_取消置顶.png    置顶会话显示处_背景=主页_置顶会话显示处_背景.png
+...               按钮_下拉菜单_背景=主页_按钮_下拉菜单_背景.png    按钮_群组_搜索结果=主页_按钮_群组_搜索结果.png    按钮_朋友圈=主页_按钮_朋友圈.png    选择_会话消息=主页_选择_会话消息.png    会话_显示处=主页_会话_显示处.png    会话显示处_背景=主页_会话显示处_背景.png    按钮_打开=主页_按钮_打开.png
+...               按钮_置顶该会话=主页_按钮_置顶该会话.png    按钮_从列表中删除=主页_按钮_从列表中删除.png    按钮_取消置顶=主页_按钮_取消置顶.png    置顶会话显示处_背景=主页_置顶会话显示处_背景.png    搜索框_关闭按钮=主页_搜索框_关闭按钮.png
 
 *** Keywords ***
 DesktopAPP主页_搜索
@@ -22,10 +22,16 @@ DesktopAPP主页_点击下拉菜单
 DesktopAPP主页_点击进入群会话页
     DeskTop Double Click    &{DesktopAPP_主页}[按钮_群组_搜索结果]
 
+DesktopAPP主页_打开会话页
+    Desktop Click    &{DesktopAPP_主页}[选择_会话消息]
+    Desktop Right Click    &{DesktopAPP_主页}[会话显示处_背景]
+    Desktop Click    &{DesktopAPP_主页}[按钮_打开]
+
 DesktopAPP主页_置顶该会话
     Desktop Click    &{DesktopAPP_主页}[选择_会话消息]
     Desktop Right Click    &{DesktopAPP_主页}[会话显示处_背景]
     Desktop Click    &{DesktopAPP_主页}[按钮_置顶该会话]
+    Desktop Click    &{DesktopAPP_主页}[搜索框_关闭按钮]
 
 DesktopAPP主页_取消置顶
     Desktop Click    &{DesktopAPP_主页}[选择_会话消息]
@@ -36,6 +42,7 @@ DesktopAPP主页_从列表中删除该会话
     Desktop Click    &{DesktopAPP_主页}[选择_会话消息]
     Desktop Right Click    &{DesktopAPP_主页}[会话_显示处]
     Desktop Click    &{DesktopAPP_主页}[按钮_从列表中删除]
+    Desktop Click    &{DesktopAPP_主页}[搜索框_关闭按钮]
 
 DesktopAPP主页_朋友圈
     Desktop Click    &{DesktopAPP_主页}[按钮_朋友圈]

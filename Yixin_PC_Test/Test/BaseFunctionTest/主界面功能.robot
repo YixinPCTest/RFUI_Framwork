@@ -20,10 +20,17 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-从列表中删除该会话_我的手机
+取消置顶会话_从列表中删除该会话_我的手机
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_取消置顶
+    DesktopAPP主页_从列表中删除该会话
+    DesktopAPP主页_点击下拉菜单
+    DesktopAPP菜单页_注销
+
+从列表中删除该会话_我的手机(无取消置顶)
+    DesktopAPP登录页_登入易信DesktopAPP
+    DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_从列表中删除该会话
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销

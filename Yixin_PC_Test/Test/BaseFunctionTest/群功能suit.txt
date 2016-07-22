@@ -25,8 +25,8 @@ Library           SikuliLibrary
     DesktopAPP主页_点击进入群会话页
     DesktopAPP群会话页_邀请好友加入
     DesktopAPP群会话页_点击群头像
-    DesktopAPP群会话页_群资料页_移除好友
-    DesktopAPP群会话页_群资料页_关闭页面
+    DesktopAPP群资料页_移除好友
+    DesktopAPP群资料页_关闭页面
     DesktopAPP群会话页_关闭页面
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
@@ -54,5 +54,5 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-群资料页_右键群成员_下拉选项展示正确
-    DesktopAPP群会话页_群资料页_右键群成员菜单校验
+群资料页_右键群成员,群主_下拉选项展示正确
+    DesktopAPP群资料页_右键设为群管理员

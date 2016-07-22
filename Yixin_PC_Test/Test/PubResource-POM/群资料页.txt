@@ -1,16 +1,16 @@
 *** Settings ***
 
 *** Variables ***
-&{DesktopAPP_群会话页_群资料页}    按钮_右键移除群成员=群资料页_按钮_右键移除群成员.png    按钮_好友头像=群资料页_按钮_好友头像.png    按钮_确定=群资料页_按钮_确定.png    小叉_关闭页面=群资料页_小叉_关闭页面.png    头像_群成员=群资料页_头像_群成员.png    列表_群成员菜单校验=群资料页_列表_群成员菜单校验.png    头像_群主=群资料页_头像_群主.png
-...               列表_群主菜单校验=群资料页_列表_群主菜单校验.png
+&{DesktopAPP_群资料页}    按钮_右键移除群成员=群资料页_按钮_右键移除群成员.png    按钮_好友头像=群资料页_按钮_好友头像.png    按钮_确定=群资料页_按钮_确定.png    小叉_关闭页面=群资料页_小叉_关闭页面.png    头像_群成员=群资料页_头像_群成员.png    列表_群成员菜单校验=群资料页_列表_群成员菜单校验.png    头像_群主=群资料页_头像_群主.png
+...               列表_群主菜单校验=群资料页_列表_群主菜单校验.png    按钮_设为管理员=群资料页_按钮_设为管理员.png    显示_管理员校验=群资料页_显示_管理员校验.png
 
 *** Keywords ***
-DesktopAPP_群资料页_移除好友
+DesktopAPP群资料页_移除好友
     Desktop Right Click    &{DesktopAPP_群资料页}[按钮_好友头像]
     DeskTop Click    &{DesktopAPP_群资料页}[按钮_移除群成员]
     Desktop Click    &{DesktopAPP_群资料页}[按钮_确定]
 
-DesktopAPP_群资料页_关闭页面
+DesktopAPP群资料页_关闭页面
     Desktop Click    &{DesktopAPP_群资料页}[小叉_关闭页面]
 
 DesktopAPP群资料页_右键群成员菜单校验
@@ -23,5 +23,5 @@ DesktopAPP群资料页_右键群主菜单校验
 
 DesktopAPP群资料页_右键设为群管理员
     Desktop Right Click    &{DesktopAPP_群资料页}[头像_群成员]
-    Desktop Right Click    &{DesktopAPP_群资料页}[头像_群成员]
-    Desktop Screen Should Contain    &{DesktopAPP_群资料页}[列表_群成员菜单校验]
+    Desktop Click    &{DesktopAPP_群资料页}[按钮_设为管理员]
+    Desktop Wait Until Screen Contain    &{DesktopAPP_群资料页}[显示_管理员校验]
