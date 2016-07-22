@@ -27,7 +27,7 @@ Library           SikuliLibrary
     DesktopAPP朋友圈页_发布动态_文字+图片    这是我的第一条动态！！ 啦啦啦。。。。。。
     DesktopAPP计算机页_打开图片
     DesktopAPP朋友圈页_发布按钮
-    sleep 3s
+    sleep     3s
     DesktopAPP朋友圈页_关闭
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销

@@ -5,7 +5,7 @@ Resource          ../PubResource-POM/元子页面关键字.txt
 Library           SikuliLibrary
 
 *** Test Cases ***
-主页菜单点击发起群聊-新建群
+主页菜单点击发起群聊_新建群
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_发起群聊
@@ -19,7 +19,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-群会话页-邀请好友加入群聊-再将好友移除群聊
+群会话页_邀请好友加入群聊_再将好友移除群聊
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    测试2
     DesktopAPP主页_点击进入群会话页
@@ -31,7 +31,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-群会话页-进入群空间-发布群动态
+群会话页_进入群空间_发布群动态
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    测试2
     DesktopAPP主页_点击进入群会话页
@@ -41,7 +41,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-群会话页-进入群空间点赞_评论_回复_删除群动态
+群会话页_进入群空间点赞_评论_回复评论_删除群动态
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    测试2
     DesktopAPP主页_点击进入群会话页
@@ -53,3 +53,6 @@ Library           SikuliLibrary
     DesktopAPP群空间页_删除群动态
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
+
+群资料页_右键群成员_下拉选项展示正确
+    DesktopAPP群会话页_群资料页_右键群成员菜单校验

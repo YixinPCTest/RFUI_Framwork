@@ -5,7 +5,7 @@ Resource          ../PubResource-POM/元子页面关键字.txt
 Library           SikuliLibrary
 
 *** Test Cases ***
-登陆-会话页发送消息，贴图-退出易信
+登陆_会话页发送消息，贴图_退出易信
     [Setup]
     DesktopAPP登录页_登入易信DesktopAPP
     #DesktopAPP错误时始终退出应用
@@ -19,7 +19,7 @@ Library           SikuliLibrary
     DesktopAPP菜单页_注销
     [Teardown]    DesktopAPP用例失败时始终退出应用
 
-登陆-会话页发送文件-退出易信
+登陆_会话页发送文件_退出易信
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
@@ -30,7 +30,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_退出
 
-登陆-会话页发送我的收藏-退出易信
+登陆_会话页发送我的收藏_退出易信
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
@@ -43,7 +43,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-登陆-会话页收藏消息-退出易信
+登陆_会话页收藏消息_退出易信
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
@@ -59,7 +59,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-登陆-会话页通过拖拽发送文件-退出易信
+登陆_会话页通过拖拽发送文件_退出易信
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
@@ -71,7 +71,7 @@ Library           SikuliLibrary
     DesktopAPP主页_点击下拉菜单
     DesktopAPP菜单页_注销
 
-登陆-会话页发送截图-退出易信
+登陆_会话页发送截图_退出易信
     DesktopAPP登录页_登入易信DesktopAPP
     DesktopAPP主页_搜索    我的手机
     DesktopAPP主页_经消息进入会话页
